@@ -117,7 +117,7 @@ const Navbar = () => {
                                 alt="HabitTracker Logo"
                                 className="w-15 h-15"
                             />
-                            <span >GoodHabit</span>
+                            <span>GoodHabit</span>
                         </div>
                     </span>
                 </NavLink>
