@@ -1,0 +1,29 @@
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 15px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+
+.nav-link:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+}
+
+
+.nav-link.active {
+    color: white;
+    background-color: #007bff;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 6px 10px;
+}
+
+.menu li .nav-link.active {
+    background-color: #007bff;
+    color: white;
+}
