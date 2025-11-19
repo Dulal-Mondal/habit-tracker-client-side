@@ -25,7 +25,8 @@ const Footer = () => {
 
 
                 <div className="text-center md:text-left mb-4 md:mb-0">
-                    <p>📞 Contact: support@habittracker.com</p>
+                    <p>Email: support@habittracker.com</p>
+                    <p>📞 Contact: 01726526555</p>
                     <p>📄 <a href="/terms" className="underline hover:text-blue-400">Terms & Conditions</a></p>
                 </div>
 
