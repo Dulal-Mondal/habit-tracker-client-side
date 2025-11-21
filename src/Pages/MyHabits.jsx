@@ -175,7 +175,7 @@ const MyHabits = () => {
         <section className="max-w-6xl mx-auto px-4 py-10 w-full overflow-x-hidden">
             <h2 className="text-3xl font-bold mb-6 text-center">My Habits</h2>
 
-            {/* Desktop Table */}
+
             <div className="hidden md:block w-full overflow-hidden">
                 <table className="w-full border-collapse text-left table-auto">
                     <thead>
@@ -220,7 +220,7 @@ const MyHabits = () => {
                 </table>
             </div>
 
-            {/* Mobile Cards */}
+
             <div className="md:hidden w-full flex flex-col items-center space-y-4 overflow-x-hidden">
                 {habits.map((habit) => (
                     <div
