@@ -78,7 +78,7 @@ const UpdateHabit = () => {
         }
     };
 
-    if (loading) return <p className="text-center py-10">Loading...</p>;
+    if (loading) return <p className="text-center py-9">Loading...</p>;
 
     return (
         <section className="max-w-3xl mx-auto px-4 py-10">

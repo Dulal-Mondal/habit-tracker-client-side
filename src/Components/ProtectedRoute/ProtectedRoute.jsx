@@ -7,7 +7,7 @@ const ProtectedRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading) {
-        return <span className="loading loading-dots loading-2xl"></span>;
+        return <span className="loading loading-dots loading-xl"></span>;
     }
 
     if (!user) {
