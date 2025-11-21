@@ -26,7 +26,7 @@ const Login = () => {
             Swal.fire({
                 icon: "success",
                 title: "Login Successful!",
-                text: "Welcome back to Good Habit 🎉",
+                text: "Welcome back to Good Habit",
                 timer: 2000,
                 showConfirmButton: false,
             });
@@ -50,7 +50,7 @@ const Login = () => {
             Swal.fire({
                 icon: "success",
                 title: "Google Login Successful!",
-                text: "Welcome to Good Habit 🎉",
+                text: "Welcome to Good Habit",
                 timer: 2000,
                 showConfirmButton: false,
             });
@@ -79,7 +79,7 @@ const Login = () => {
                 className="bg-white shadow-2xl rounded-2xl w-full max-w-md p-8"
             >
                 <h1 className="text-4xl font-bold text-center mb-6 bg-linear-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-                    Welcome Back 👋
+                    Welcome Back
                 </h1>
                 <p className="text-center text-gray-500 mb-8">
                     Login to continue your habit journey
