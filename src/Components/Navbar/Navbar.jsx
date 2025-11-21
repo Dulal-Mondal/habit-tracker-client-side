@@ -107,20 +107,19 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-
                 <NavLink to="/">
-                    <span className="btn btn-ghost normal-case text-3xl text-blue-600 font-bold ">
-
-                        <div className="flex items-center gap-1 mb-4 md:mb-0">
-                            <img
-                                src={logoImg}
-                                alt="HabitTracker Logo"
-                                className="w-15 h-15"
-                            />
-                            <span>GoodHabit</span>
-                        </div>
-                    </span>
+                    <div className="flex items-center gap-2 md:gap-3 p-2">
+                        <img
+                            src={logoImg}
+                            alt="HabitTracker Logo"
+                            className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 object-contain"
+                        />
+                        <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600">
+                            GoodHabit
+                        </span>
+                    </div>
                 </NavLink>
+
             </div>
 
             <div className="navbar-center hidden lg:flex">
