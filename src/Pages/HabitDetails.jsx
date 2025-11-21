@@ -1,13 +1,14 @@
+// Updated responsive HabitDetails component
+// (Paste your existing imports here)
+
 import React, { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "../services/apiClient";
 import { AuthContext } from "../Context/AuthContext";
 import Swal from "sweetalert2";
 import { motion } from "framer-motion";
-
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
-
 
 const HabitDetails = () => {
     const { id } = useParams();
@@ -92,31 +93,36 @@ const HabitDetails = () => {
 
     return (
         <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl mx-auto p-6 mt-10 bg-white shadow-lg rounded"
+            className="max-w-3xl mx-auto p-4 sm:p-6 mt-6 sm:mt-10 bg-white shadow-lg rounded-lg"
         >
-            <h1 className="text-3xl font-bold mb-4">{habit.title}</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center sm:text-left">
+                {habit.title}
+            </h1>
 
             {habit.imageUrl && (
                 <img
                     src={habit.imageUrl}
                     alt={habit.title}
-                    className="w-full h-64 object-cover rounded mb-4"
+                    className="w-full h-48 sm:h-64 object-cover rounded mb-4"
                 />
             )}
 
-            <p className="mb-4">{habit.description}</p>
-
+            <p className="mb-4 text-base sm:text-lg text-gray-700">{habit.description}</p>
 
             <p
-                className="mb-2 text-gray-600"
+                className="mb-2 text-gray-600 text-sm sm:text-base"
                 data-tooltip-id="category-tip"
                 data-tooltip-content={`This habit belongs to the ${habit.category || "General"} category`}
             >
-                Category: {habit.category || "N/A"}
+                <span className="font-semibold">Category:</span> {habit.category || "N/A"}
             </p>
 
+            {/* Progress Bar */}
             <div className="mb-4">
                 <p
                     className="text-sm mb-1"
@@ -135,22 +141,23 @@ const HabitDetails = () => {
                 </div>
             </div>
 
+            {/* Streak */}
             <motion.p
-                className="mb-4"
+                className="mb-4 text-sm sm:text-base"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 100 }}
                 data-tooltip-id="streak-tip"
                 data-tooltip-content="Your current streak increases each consecutive day you complete this habit!"
             >
-                Current Streak:{" "}
+                <span className="font-semibold">Current Streak:</span>{" "}
                 <span className="bg-green-200 text-green-800 px-2 py-1 rounded">
                     {habit.currentStreak || 0} days
                 </span>
             </motion.p>
 
-
-            <div className="text-sm text-gray-500 mb-3">
+            {/* Created By */}
+            <div className="text-xs sm:text-sm text-gray-500 mb-3">
                 <p>
                     Created by:{" "}
                     <span className="font-medium">
@@ -159,25 +166,22 @@ const HabitDetails = () => {
                 </p>
             </div>
 
-
+            {/* Buttons */}
             <button
                 onClick={handleMarkComplete}
-                className={`w-full mt-2 py-2 rounded text-white ${completedToday ? "bg-green-500" : "bg-blue-500 hover:bg-blue-600"
+                className={`w-full mt-2 py-2 rounded text-white text-sm sm:text-base ${completedToday ? "bg-green-500" : "bg-blue-500 hover:bg-blue-600"
                     }`}
                 disabled={completedToday}
             >
                 {completedToday ? "Completed Today ✅" : "Mark Complete"}
             </button>
 
-
-
             <button
                 onClick={() => navigate("/myhabits")}
-                className="btn btn-neutral w-full mt-2"
+                className="w-full mt-2 py-2 text-sm sm:text-base bg-gray-800 text-white rounded hover:bg-gray-900"
             >
                 Back to My Habits
             </button>
-
 
             <Tooltip id="category-tip" place="top" effect="solid" />
             <Tooltip id="progress-tip" place="top" effect="solid" />
