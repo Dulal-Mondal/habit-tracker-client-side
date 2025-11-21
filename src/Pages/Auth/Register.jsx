@@ -127,7 +127,6 @@ const Register = () => {
                                     </button>
                                 </div>
 
-
                                 <div className="text-sm mt-2 space-y-1">
                                     <p className={hasMinLength ? "text-green-600" : "text-red-500"}>
                                         • At least 6 characters
