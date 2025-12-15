@@ -1,6 +1,6 @@
 
 ## Name:GoodHabit - Habit Tracker Website
-Live Site URL:https://amazing-travesseiro-72873f.netlify.app/
+Live Site URL:https:https://phenomenal-mooncake-e6698e.netlify.app/addhabits
 
 ##  Features
 
